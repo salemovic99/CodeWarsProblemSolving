@@ -1,7 +1,58 @@
-﻿namespace CodeWarsProblemSolving
+﻿using System.Text;
+
+namespace CodeWarsProblemSolving
 {
     public static class Kata
     {
+        public static int[] SortNumbers(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+            {
+                return new int[] { };
+            }
+
+            Array.Sort(nums);
+            return nums;
+        }
+        public static string RepeatStr(int n, string s)
+        {
+
+            var text = new StringBuilder();
+
+            for (int i = 0; i < n; i++)
+            {
+                text.Append(s);
+            }
+            return text.ToString();
+        }
+
+        public static bool Solution(string str, string ending)
+        {
+            return str.EndsWith(ending);
+        }
+
+        public static int[] SortArray(int[] array)
+        {
+            var oddNumbers = array.Where(x => x % 2 != 0).OrderBy(x => x).ToList();
+            int oddIndex = 0;
+
+            var result = new List<int>();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 == 0)
+                {
+                    result.Add(array[i]); // Even stays in the same place
+                }
+                else
+                {
+                    result.Add(oddNumbers[oddIndex]); // Insert sorted odd number
+                    oddIndex++; // Move to next sorted odd
+                }
+            }
+
+            return result.ToArray();
+        }
 
         public static int DescendingOrderTest(int num)
         {
@@ -149,16 +200,16 @@
             // Add you code here.
             return Math.Abs((sonYears * 2) - dadYears);
         }
-        public static List<int>[] PowersOfTwo(int n)
-        {
-            var list = new List<int>();
-            for (int i = 0; i <= n; i++)
-            {
-                list.Add(2 << i);
-            }
-            return new List<int>[] { list };
+        //public static BigInteger[] PowersOfTwo(int n)
+        //{
+        //    var list = new List<int>();
+        //    for (int i = 0; i <= n; i++)
+        //    {
+        //        list.Add(2 << i);
+        //    }
+        //    return new List<int>[] { list };
 
-        }
+        //}
         public static bool CheckForFactor(int num, int factor)
         {
             // code here

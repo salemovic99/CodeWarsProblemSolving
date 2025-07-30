@@ -1,10 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+Console.WriteLine();
 
+//Console.WriteLine(Kata.RepeatStr(4, "*"));
 
+//Console.WriteLine('f' % 'a');
+//Console.WriteLine("abcde".Length);
 
-using CodeWarsProblemSolving;
-Console.WriteLine(Kata.DescendingOrderTest(42145));
+//Console.WriteLine(Kata.Solution("samurai", "ai"));
+//Console.WriteLine(Kata.Solution("sumo", "omo"));
+
+//using CodeWarsProblemSolving;
+
+//foreach (var item in Kata.SortArray(new int[] { 5, 8, 6, 3, 4 }))
+//{
+//    Console.WriteLine(item);
+//}
+//Console.WriteLine(Kata.DescendingOrderTest(42145));
 
 //Console.WriteLine(Kata.Longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 
