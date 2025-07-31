@@ -12,17 +12,3 @@ This repository contains C# solutions to programming challenges and katas from [
 - Sharpen algorithm and data structure skills
 - Track progress and prepare for coding interviews
 
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [.NET SDK](https://dotnet.microsoft.com/en-us/download) (6 or later)
-- IDE: [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/)
-
-### Run the App
-
-```bash
-dotnet run --project CodeWarsProblemSolving/CodeWarsProblemSolving.csproj
-```
-
