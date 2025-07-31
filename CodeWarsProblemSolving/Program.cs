@@ -1,7 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CodeWarsProblemSolving;
+
+
 Console.WriteLine();
 
+foreach (var item in Kata.Count("abaaaabc"))
+{
+    Console.WriteLine($"{item.Key} : {item.Value}");
+}
+
+//foreach (var item in Kata.SortNumbers(new int[] { 1, 2, 3, 10, 5 }))
+//{
+//    Console.WriteLine(item);
+//}
+
+//var numbers = Kata.SortNumbers(new int[] { });
+//Console.WriteLine(numbers.Length);
 //Console.WriteLine(Kata.RepeatStr(4, "*"));
 
 //Console.WriteLine('f' % 'a');
