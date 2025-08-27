@@ -1,14 +1,86 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using CodeWarsProblemSolving;
 
+using CodeWarsProblemSolving;
 
 Console.WriteLine();
 
-foreach (var item in Kata.Count("abaaaabc"))
+foreach (var item in Kata.PipeFix(new List<int> { 1, 2, 3, 5, 6, 8, 9 }))
 {
-    Console.WriteLine($"{item.Key} : {item.Value}");
+    Console.WriteLine(item);
 }
+
+//int[] numbers = new int[] { 5, 1, 4, 2, 3 };
+
+//Console.Write("unsorted list : ");
+//foreach (var item in numbers)
+//{
+//    Console.Write(item + " ");
+//}
+//Console.WriteLine();
+//Console.WriteLine("######################");
+//Kata.quickSort(numbers, 0, numbers.Length - 1);
+//Console.Write("sorted list : ");
+//foreach (var item in numbers)
+//{
+//    Console.Write(item + " ");
+//}
+
+
+//Console.WriteLine(Kata.LongestConsec(new string[] { "zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail" }, 2));
+//Console.WriteLine(Kata.LongestConsec(new string[] { "ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh" }, 1));
+
+
+//Console.WriteLine(Kata.binToDec("0110"));
+//Console.WriteLine(Kata.binToDec("110"));
+//Console.WriteLine(Kata.binToDec("11"));
+//Console.WriteLine(Kata.binToDec("1"));
+
+//foreach (var item in Kata.UniqueInOrder("AAAABBBCCDAABBB"))
+//{
+//    Console.WriteLine(item + " ");
+//}
+
+//foreach (var item in Kata.Maps(new[] { 2, 2, 2, 2, 2, 2 }))
+//{
+//    Console.Write(item + ", ");
+//}
+
+//Console.WriteLine(Kata.High("man i need a taxi up to ubud"));
+//Console.WriteLine(Kata.High("what time are we climbing up to the volcano"));
+//Console.WriteLine(Kata.High("take me to semynak"));
+//Console.WriteLine(Kata.High("aa b"));
+//Console.WriteLine(Kata.High("b aa"));
+
+//foreach (var item in Kata.RemoveEveryOther(new object[] { "Hello", "Goodbye", "Hello Again" }))
+//{
+//    Console.WriteLine(item);
+//}
+
+//foreach (var item in Kata.RemoveEveryOther(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }))
+//{
+//    Console.WriteLine(item);
+//}
+
+//foreach (var item in Kata.RemoveEveryOther(new object[] { new object[] { "Goodbye" }, new Dictionary<string, string>() { { "Great", "Job" } } }))
+//{
+//    Console.WriteLine(item);
+//}
+
+//Console.WriteLine(Kata.IsTriangle(1, 2, 2));
+//Console.WriteLine(Kata.IsTriangle(-5, 2, 2));
+//Console.WriteLine(Kata.IsTriangle(0, 2, 2));
+//Console.WriteLine(Kata.IsTriangle(1, 2, 9));
+
+
+//Console.WriteLine(Kata.Persistence(999));
+//Console.WriteLine(Kata.Persistence(39));
+//Console.WriteLine(Kata.Persistence(25));
+
+//foreach (var item in Kata.Count("abaaaabc"))
+//{
+//    Console.WriteLine($"{item.Key} : {item.Value}");
+//}
 
 //foreach (var item in Kata.SortNumbers(new int[] { 1, 2, 3, 10, 5 }))
 //{

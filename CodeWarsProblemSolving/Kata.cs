@@ -2,8 +2,232 @@
 
 namespace CodeWarsProblemSolving
 {
+
+
+
     public static class Kata
     {
+        public static List<int> PipeFix(List<int> numbers)
+        {
+            //Good luck!
+            List<int> result = new List<int>();
+            int i = 0;
+
+            for (i = numbers.Min(); i <= numbers.Max(); i++)
+            {
+                result.Add(i);
+            }
+            return result;
+        }
+
+        public static void quickSort(int[] arr, int start, int end)
+        {
+            if (end <= start)
+                return;
+
+            int pivot = partation(arr, start, end);
+            quickSort(arr, start, pivot - 1);
+            quickSort(arr, pivot + 1, end);
+        }
+
+        public static int partation(int[] arr, int start, int end)
+        {
+            int pivotValue = arr[end];
+            int i = start - 1;
+
+            for (int j = start; j < end; j++)
+            {
+                if (arr[j] < pivotValue)
+                {
+                    i++;
+                    // Swap arr[i] and arr[j]
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+            // Final swap for pivot
+            i++;
+            int temp2 = arr[i];
+            arr[i] = arr[end];
+            arr[end] = temp2;
+
+            return i;
+
+        }
+
+        public static string LongestConsec(string[] strarr, int k)
+        {
+            //edage cases
+
+            if (strarr.Length == 0 || k > strarr.Length || k <= 0)
+            {
+                return "";
+            }
+
+
+            string longestWord = string.Empty;
+
+            for (int i = 0; i < strarr.Length - 1; i++)
+            {
+
+                StringBuilder currentWord = new StringBuilder();
+                for (int j = i; k < j; j++)
+                {
+                    currentWord.Append(strarr[j]);
+                }
+
+                if (currentWord.Length > longestWord.Length)
+                {
+
+                }
+            }
+
+            return longestWord;
+        }
+
+        public static int binToDec(string s)
+        {
+
+            //"011"
+            if (s == null)
+            {
+                return 0;
+            }
+            int result = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == '1')
+                {
+                    result += (int)Math.Pow(2, s.Length - 1 - i);
+                }
+            }
+
+            return result;
+
+        }
+
+        public static IEnumerable<T> UniqueInOrder<T>(IEnumerable<T> iterable)
+        {
+            //your code here...
+            List<T> list = new List<T>();
+
+            foreach (var item in iterable)
+            {
+                var previousItem = list.Count > 0 ? list[list.Count - 1] : default(T);
+
+                if (!EqualityComparer<T>.Default.Equals(previousItem, item))
+                {
+                    list.Add(item);
+                }
+
+
+            }
+            return list;
+        }
+
+        public static int[] Maps(int[] x)
+        {
+
+
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] *= 2;
+            }
+            return x;
+        }
+
+        public static string High(string s)
+        {
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+
+            string[] words = s.Split(' ');
+            int[] scors = new int[words.Length];
+
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < words[i].Length; j++)
+                {
+                    count += Convert.ToInt32(alphabet.IndexOf(words[i][j]) + 1);
+
+                }
+
+                scors[i] = count;
+            }
+
+            int indexofHighestScore = Array.IndexOf(scors, scors.Max());
+
+            return words[indexofHighestScore];
+
+
+        }
+
+        public static object[] RemoveEveryOther(object[] arr)
+        {
+            // happy coding
+            List<object> list = new List<object>();
+
+            for (int i = 0; i < arr.Length; i += 2)
+            {
+                list.Add(arr[i]);
+            }
+
+            return list.ToArray();
+        }
+
+        public static bool IsTriangle(int a, int b, int c)
+        {
+            return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
+        }
+
+        public static int Persistence(long n)
+        {
+            // your code
+
+            //convert it to string
+            string digitCount = n.ToString();
+
+            //check if the length of digit is 1 then return 1
+            if (digitCount.Length == 1)
+            {
+                return 0; // No persistence needed for single-digit numbers
+            }
+            //split the string to array
+            var digits = digitCount.ToCharArray();
+
+            //set multipl count = 0
+            int multiplCount = 0;
+
+            //varible for count the result of multipl 
+            long result = 1;
+
+            //while digit length not equal one keep working
+            while (digitCount.Length > 1)
+            {
+
+                result = 1; // Reset result for each multiplication
+
+                for (int i = 0; i < digits.Length; i++)
+                {
+                    result *= Convert.ToInt32(digits[i]) - 48;
+                }
+
+                multiplCount++;
+                digitCount = result.ToString();
+
+                digits = result.ToString().ToCharArray();
+
+            }
+
+            return multiplCount;
+
+
+        }
+
         public static Dictionary<char, int> Count(string str)
         {
             if (string.IsNullOrEmpty(str))
