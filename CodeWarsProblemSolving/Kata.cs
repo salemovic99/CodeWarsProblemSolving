@@ -7,6 +7,70 @@ namespace CodeWarsProblemSolving
 
     public static class Kata
     {
+        public static string[] StringToArray(string str)
+        {
+            // code code code
+            return str.Split(' ');
+        }
+
+        public static string AddBinary(int a, int b)
+        {
+            return Convert.ToString(a + b, 2);
+        }
+
+        public static int Factorial(int n)
+        {
+            if (n < 0 || n > 12)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            if (n == 0 || n == 1)
+                return 1;
+
+            int result = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        public static int SumOfMinimums(int[,] numbers)
+        {
+            int result = 0;
+            int minRowNumber = 0;
+
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                minRowNumber = numbers[i, 0];
+                for (int j = 1; j < numbers.GetLength(1); j++)
+                {
+                    if (numbers[i, j] < minRowNumber)
+                    {
+                        minRowNumber = numbers[i, j];
+                    }
+                }
+                result += minRowNumber;
+            }
+
+            return result;
+        }
+
+        public static int binaryArrayToNumber(int[] BinaryArray)
+        {
+            //Code here
+            int result = 0;
+
+            for (int i = 0; i < BinaryArray.Length; i++)
+            {
+                if (BinaryArray[i] == 1)
+                {
+                    result += (int)Math.Pow(2, BinaryArray.Length - 1 - i);
+                }
+            }
+            return result;
+        }
+
         public static List<int> PipeFix(List<int> numbers)
         {
             //Good luck!
