@@ -6,6 +6,47 @@ namespace CodeWarsProblemSolving
     public static class Kata
     {
 
+        public static string CalculateAge(int birth, int yearTo)
+        {
+
+            return birth == yearTo ? "You were born this very year!" : yearTo > birth ?
+                yearTo - birth > 10 ? $"You are {yearTo - birth} years old." :
+                $"You are {yearTo - birth} year old."
+                : birth - yearTo > 10 ?
+                $"You will be born in {birth - yearTo} years." :
+                $"You will be born in {birth - yearTo} year.";
+        }
+
+        public static bool IsCube(double volume, double side)
+        {
+            if (volume < 0 || side < 0)
+                return false;
+
+            return Math.Pow(side, 3) == volume;
+        }
+
+        public static int[] Take(int[] arr, int n)
+        {
+            if (arr.Length == 0 || n <= 0)
+                return new int[] { };
+
+            int[] ints = new int[n > arr.Length ? arr.Length : n];
+
+
+            for (int i = 0; i < n && i < arr.Length; i++)
+            {
+                ints[i] = arr[i];
+            }
+
+
+            return ints;
+        }
+
+        public static bool Include(int[] arr, int item)
+        {
+            return arr.Contains(item) ? true : false;
+        }
+
         public static int Sum(int[] numbers)
         {
             //edage cases

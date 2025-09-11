@@ -34,9 +34,26 @@
 
 using CodeWarsProblemSolving;
 
+Console.WriteLine(Kata.CalculateAge(2003, 2020));
+Console.WriteLine(Kata.CalculateAge(2019, 2020));
+Console.WriteLine(Kata.CalculateAge(2003, 2003));
+Console.WriteLine(Kata.CalculateAge(2020, 2003));
+Console.WriteLine(Kata.CalculateAge(2020, 2019));
 
-Console.WriteLine(Kata.Sum(new int[] { 6, 2, 1, 8, 10 }));
-Console.WriteLine(Kata.Sum(new int[] { 1, 1, 11, 2, 3 }));
+//Console.WriteLine(Kata.IsCube(1, 1));
+//Console.WriteLine(Kata.IsCube(8, 2));
+//Console.WriteLine(Kata.IsCube(2, 1));
+//Console.WriteLine(Kata.IsCube(6, 3));
+//Console.WriteLine(Kata.IsCube(-8, -2));
+
+//foreach (var item in Kata.Take(new int[] { 9, 20, 85, 20, 80, 10, 92, 20, 86, 27 }, 16))
+//{
+//    Console.Write(item + " ");
+//}
+
+
+//Console.WriteLine(Kata.Sum(new int[] { 6, 2, 1, 8, 10 }));
+//Console.WriteLine(Kata.Sum(new int[] { 1, 1, 11, 2, 3 }));
 
 
 //Console.WriteLine(Kata.Accum("HbideVbxncC"));
