@@ -34,8 +34,31 @@
 
 using CodeWarsProblemSolving;
 
-Console.WriteLine(Kata.AddBinary(1, 1));
-Console.WriteLine(Kata.AddBinary(5, 9));
+
+Console.WriteLine(Kata.Sum(new int[] { 6, 2, 1, 8, 10 }));
+Console.WriteLine(Kata.Sum(new int[] { 1, 1, 11, 2, 3 }));
+
+
+//Console.WriteLine(Kata.Accum("HbideVbxncC"));
+//Console.WriteLine(Kata.Accum("ZpglnRxqenU"));
+//Console.WriteLine(Kata.Accum("abcd"));
+//Console.WriteLine(Kata.Accum("cwAt"));
+
+
+//Console.WriteLine(Kata.FindAverage(new[] { 1 }));
+//Console.WriteLine(Kata.FindAverage(new[] { 0 }));
+//Console.WriteLine(Kata.FindAverage(new[] { 1, 3, 5, 7 }));
+//Console.WriteLine(Kata.FindAverage(new[] { -10, -5, -5, 0 }));
+
+//Console.WriteLine(Kata.IsAnagram("", ""));
+//Console.WriteLine(Kata.IsAnagram("aa", "aa"));
+//Console.WriteLine(Kata.IsAnagram("aa", "aab"));
+//Console.WriteLine(Kata.IsAnagram("foefet", "toffee"));
+//Console.WriteLine(Kata.IsAnagram("Buckethead", "DeathCubeK"));
+//Console.WriteLine(Kata.IsAnagram("Twoo", "Woot"));
+
+//Console.WriteLine(Kata.AddBinary(1, 1));
+//Console.WriteLine(Kata.AddBinary(5, 9));
 
 
 //Console.WriteLine(Kata.Factorial(-1));

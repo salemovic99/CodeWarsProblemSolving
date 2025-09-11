@@ -3,10 +3,92 @@
 namespace CodeWarsProblemSolving
 {
 
-
-
     public static class Kata
     {
+
+        public static int Sum(int[] numbers)
+        {
+            //edage cases
+            if (numbers == null || numbers.Length == 1 || numbers.Length == 0)
+                return 0;
+
+            int sum = 0;
+
+            Array.Sort(numbers);
+
+
+            for (int i = 1; i < numbers.Length - 1; i++)
+            {
+                sum += numbers[i];
+            }
+
+            return sum;
+        }
+
+        public static string Accum(string s)
+        {
+            StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+
+                for (int j = 0; j <= i; j++)
+                {
+                    if (j == 0)
+                    {
+                        result.Append(char.ToUpper(s[i]));
+                    }
+                    else
+                    {
+                        result.Append(char.ToLower(s[i]));
+                    }
+                }
+                if (i != s.Length - 1)
+                {
+                    result.Append('-');
+                }
+            }
+
+            return result.ToString();
+        }
+
+        public static int FindAverage(int[] nums)
+        {
+            // your code
+            int sum = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
+
+            return sum / nums.Length;
+        }
+
+        public static bool IsAnagram(string a, string b)
+        {
+
+            if (a.Length != b.Length)
+                return false;
+
+            var charArrayA = a.ToLower().ToCharArray();
+            var charArrayB = b.ToLower().ToCharArray();
+
+            Array.Sort(charArrayA);
+            Array.Sort(charArrayB);
+
+            if (new string(charArrayA) != new string(charArrayB))
+                return false;
+
+            return true;
+        }
+
+        public static int HowManyLightsabersDoYouOwn(string name)
+        {
+            //Code goes here
+            return name == "Zach" ? 18 : 0;
+        }
+
         public static string[] StringToArray(string str)
         {
             // code code code
